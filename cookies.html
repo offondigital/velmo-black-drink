@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    
+    <title>Política de Cookies - Velmo Black</title>
+    <meta name="description" content="Política de Cookies do Velmo Black. Entenda como utilizamos cookies em nosso site.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black-absolute: #050505;
+            --black-card: #0a0a0a;
+            --cyan-neon: #00F0FF;
+            --cyan-dark: #008080;
+            --white-pure: #FFFFFF;
+            --gray-light: #E0E0E0;
+            --gray-medium: #999;
+            --gray-dark: #666;
+            --gold-urgency: #FFB800;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --border-glow: rgba(0, 240, 255, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--black-absolute);
+            color: var(--gray-light);
+            font-family: 'Sora', 'Poppins', sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .legal-header {
+            background: linear-gradient(180deg, rgba(0, 240, 255, 0.05) 0%, transparent 100%);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .legal-header-inner {
+            max-width: 1200px; width: 90%; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+        }
+
+        .legal-logo { text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .legal-logo-text { font-size: 20px; font-weight: 900; color: var(--white-pure); letter-spacing: 2px; }
+        .legal-logo-highlight { color: var(--cyan-neon); }
+
+        .legal-back-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: transparent; border: 1px solid var(--border-glow);
+            color: var(--cyan-neon); text-decoration: none; padding: 10px 20px;
+            border-radius: 50px; font-size: 13px; font-weight: 600; transition: all 0.3s ease;
+        }
+        .legal-back-btn:hover { background: rgba(0, 240, 255, 0.08); border-color: var(--cyan-neon); box-shadow: 0 0 20px rgba(0, 240, 255, 0.15); }
+
+        .legal-container { max-width: 900px; width: 90%; margin: 0 auto; padding: 60px 0; flex: 1; }
+
+        .legal-card {
+            background: rgba(18, 18, 18, 0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-subtle); border-radius: 24px; padding: 50px 40px;
+        }
+
+        .legal-card h1 { font-size: 36px; font-weight: 800; color: var(--white-pure); margin-bottom: 8px; }
+        .legal-card .gradient-text { background: linear-gradient(135deg, #00F0FF, #008080); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .legal-card .updated-date { color: var(--gray-dark); font-size: 13px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border-subtle); }
+        .legal-card h2 { font-size: 24px; font-weight: 700; color: var(--white-pure); margin: 36px 0 16px; padding-left: 16px; border-left: 3px solid var(--cyan-neon); }
+        .legal-card p { color: var(--gray-medium); margin-bottom: 16px; font-size: 15px; }
+        .legal-card strong { color: var(--white-pure); }
+        .legal-card a { color: var(--cyan-neon); text-decoration: none; transition: color 0.3s ease; }
+        .legal-card a:hover { color: var(--white-pure); text-decoration: underline; }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 14px;
+        }
+
+        .cookie-table th {
+            background: rgba(0, 240, 255, 0.08);
+            color: var(--cyan-neon);
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-glow);
+        }
+
+        .cookie-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-subtle);
+            color: var(--gray-medium);
+        }
+
+        .cookie-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .cookie-essential-badge {
+            background: rgba(76, 175, 80, 0.15);
+            color: #4CAF50;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .cookie-analytics-badge {
+            background: rgba(255, 184, 0, 0.15);
+            color: #FFB800;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .legal-highlight-box {
+            background: rgba(0, 240, 255, 0.05); border: 1px solid var(--border-glow);
+            border-radius: 12px; padding: 20px; margin: 24px 0;
+        }
+
+        .legal-footer { background: var(--black-card); border-top: 1px solid var(--border-subtle); padding: 20px 0; text-align: center; }
+        .legal-footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 12px; }
+        .legal-footer-links a { color: var(--gray-dark); text-decoration: none; font-size: 13px; transition: color 0.3s ease; }
+        .legal-footer-links a:hover { color: var(--cyan-neon); }
+        .legal-footer-links a.active { color: var(--cyan-neon); font-weight: 600; }
+        .legal-footer p { color: var(--gray-dark); font-size: 12px; }
+
+        @media (max-width: 768px) {
+            .legal-card { padding: 30px 20px; }
+            .legal-card h1 { font-size: 26px; }
+            .legal-card h2 { font-size: 20px; }
+            .cookie-table { font-size: 12px; }
+            .cookie-table th, .cookie-table td { padding: 8px 10px; }
+            .legal-header-inner { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="legal-header">
+        <div class="legal-header-inner">
+            <a href="index.html" class="legal-logo">
+                <span class="legal-logo-text">VELMO <span class="legal-logo-highlight">BLACK</span></span>
+            </a>
+            <a href="index.html" class="legal-back-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Voltar para o site
+            </a>
+        </div>
+    </header>
+
+    <main class="legal-container">
+        <div class="legal-card">
+            <h1>Política de <span class="gradient-text">Cookies</span></h1>
+            <p class="updated-date">Última atualização: 20 de Maio de 2026</p>
+
+            <div class="legal-highlight-box">
+                <p><strong>🍪 Transparência:</strong> Utilizamos cookies para melhorar sua experiência, analisar o tráfego e personalizar conteúdos. Ao continuar navegando, você concorda com o uso de cookies. Você pode desabilitá-los nas configurações do seu navegador a qualquer momento.</p>
+            </div>
+
+            <h2>1. O Que São Cookies?</h2>
+            <p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo (computador, tablet ou smartphone) quando você visita um site. Eles permitem que o site "lembre" de suas ações e preferências por um período de tempo.</p>
+
+            <h2>2. Tipos de Cookies que Utilizamos</h2>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Finalidade</th>
+                        <th>Exemplo</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Essenciais</strong></td>
+                        <td>Garantir o funcionamento básico do site: carrinho de compras, login, segurança e processamento de pagamentos.</td>
+                        <td>PHPSESSID, woocommerce_cart_hash</td>
+                        <td><span class="cookie-essential-badge">Necessário</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Desempenho</strong></td>
+                        <td>Analisar como os visitantes interagem com o site: páginas visitadas, tempo de permanência, cliques.</td>
+                        <td>_ga (Google Analytics)</td>
+                        <td><span class="cookie-analytics-badge">Opcional</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Funcionalidade</strong></td>
+                        <td>Lembrar suas preferências: idioma, região, produtos visualizados.</td>
+                        <td>wp-settings, viewed_product</td>
+                        <td><span class="cookie-analytics-badge">Opcional</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Marketing</strong></td>
+                        <td>Exibir anúncios relevantes e mensurar campanhas publicitárias (Meta Ads, Google Ads).</td>
+                        <td>_fbp (Meta Pixel)</td>
+                        <td><span class="cookie-analytics-badge">Opcional</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>3. Cookies de Terceiros</h2>
+            <p>Nosso site utiliza serviços de terceiros que também podem definir cookies no seu dispositivo para os fins descritos acima:</p>
+            <ul style="list-style:none;padding-left:20px;margin-bottom:16px;">
+                <li style="margin-bottom:10px;position:relative;padding-left:20px;font-size:15px;color:var(--gray-medium);">
+                    <span style="position:absolute;left:0;color:var(--cyan-neon);font-weight:bold;">•</span>
+                    <strong>Google Analytics 4:</strong> Análise de tráfego e comportamento de navegação (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política da Google</a>).
+                </li>
+                <li style="margin-bottom:10px;position:relative;padding-left:20px;font-size:15px;color:var(--gray-medium);">
+                    <span style="position:absolute;left:0;color:var(--cyan-neon);font-weight:bold;">•</span>
+                    <strong>Meta Pixel (Facebook/Instagram):</strong> Medição de campanhas e criação de públicos personalizados (<a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">Política da Meta</a>).
+                </li>
+                <li style="margin-bottom:10px;position:relative;padding-left:20px;font-size:15px;color:var(--gray-medium);">
+                    <span style="position:absolute;left:0;color:var(--cyan-neon);font-weight:bold;">•</span>
+                    <strong>Google Tag Manager:</strong> Gerenciamento centralizado de scripts e tags de marketing.
+                </li>
+            </ul>
+
+            <h2>4. Como Gerenciar Cookies</h2>
+            <p>Você pode controlar e/ou excluir cookies conforme desejar. A maioria dos navegadores permite:</p>
+            <ul style="list-style:none;padding-left:20px;margin-bottom:16px;">
+                <li style="margin-bottom:10px;position:relative;padding-left:20px;font-size:15px;color:var(--gray-medium);"><span style="position:absolute;left:0;color:var(--cyan-neon);font-weight:bold;">•</span> Ver quais cookies estão armazenados.</li>
+                <li style="margin-bottom:10px;position:relative;padding-left:20px;font-size:15px;color:var(--gray-medium);"><span style="position:absolute;left:0;color:var(--cyan-neon);font-weight:bold;">•</span> Bloquear cookies de terceiros.</li>
+                <li style="margin-bottom:10px;position:relative;padding-left:20px;font-size:15px;color:var(--gray-medium);"><span style="position:absolute;left:0;color:var(--cyan-neon);font-weight:bold;">•</span> Limpar todos os cookies ao fechar o navegador.</li>
+            </ul>
+            <p><strong>Atenção:</strong> Desabilitar cookies essenciais pode afetar o funcionamento do site, incluindo o carrinho de compras e o processo de checkout.</p>
+            <p>Para gerenciar suas preferências de cookies no Google Analytics, acesse: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out</a></p>
+            <p>Para gerenciar preferências de anúncios da Meta: <a href="https://www.facebook.com/ads/preferences" target="_blank" rel="noopener">Preferências de Anúncios</a></p>
+
+            <h2>5. Consentimento</h2>
+            <p>Ao acessar nosso site pela primeira vez, você visualizará um banner de cookies solicitando seu consentimento para cookies opcionais. Você pode aceitar todos, rejeitar os opcionais ou personalizar suas preferências.</p>
+
+            <h2>6. Atualizações</h2>
+            <p>Esta Política de Cookies pode ser atualizada periodicamente. A data da última atualização estará sempre indicada no topo.</p>
+
+            <h2>7. Contato</h2>
+            <p>Dúvidas sobre cookies? Entre em contato: <a href="mailto:privacidade@velmoblack.com.br">privacidade@velmoblack.com.br</a></p>
+        </div>
+    </main>
+
+    <footer class="legal-footer">
+        <div class="legal-footer-links">
+            <a href="privacidade.html">Privacidade</a>
+            <a href="termos.html">Termos de Uso</a>
+            <a href="cookies.html" class="active">Cookies</a>
+            <a href="isencao.html">Isenção Meta/Google</a>
+        </div>
+        <p>© 2026 Velmo Black. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

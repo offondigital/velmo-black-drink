@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- SEO -->
+    <title>Velmo Black - O Emagrecedor Natural Nº1 do Brasil</title>
+    <meta name="description" content="Conheça o Velmo Black, o emagrecedor natural mais potente do Brasil. Perca peso com saúde e sem esforço! Fórmula exclusiva aprovada pela Anvisa.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://velmoblackoficial.com.br/">
+    
+    <!-- Open Graph -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Velmo Black - O Emagrecedor Natural Nº1 do Brasil">
+    <meta property="og:description" content="Conheça o Velmo Black, o emagrecedor natural mais potente do Brasil. Perca peso com saúde e sem esforço!">
+    <meta property="og:url" content="https://velmoblackoficial.com.br/">
+    <meta property="og:site_name" content="Velmo Black">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/favicon.jpg">
+    
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Three.js (para o produto 3D) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- JavaScript Principal -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- 1. HERO SECTION 3D -->
+    <!-- ========================================== -->
+    <section class="hero-million" id="home">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-glow"></div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    🔥 +30.000 Frascos Vendidos Este Mês
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">O Fim do Esforço.</span>
+                    <span class="title-line gradient-text">O Início do Seu Novo Corpo.</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    <strong>Velmo Black</strong>: A sinergia perfeita entre o <span class="highlight">Drink</span> e 
+                    as <span class="highlight">Cápsulas</span> para um emagrecimento <span class="highlight">10X mais potente</span>, 
+                    natural e aprovado pela Anvisa.
+                </p>
+                
+                <ul class="hero-benefits">
+                    <li class="benefit-item"><span class="benefit-icon">✓</span>Perca peso sem passar fome</li>
+                    <li class="benefit-item"><span class="benefit-icon">✓</span>Reduza celulite e estrias</li>
+                    <li class="benefit-item"><span class="benefit-icon">✓</span>Resultados visíveis em 15 dias</li>
+                </ul>
+                
+                <a href="#combos" class="hero-cta">
+                    <span class="cta-text">EU QUERO EMAGRECER AGORA</span>
+                    <span class="cta-arrow">→</span>
+                    <span class="cta-shine"></span>
+                </a>
+                
+                <p class="hero-guarantee">🔒 Compra segura • Teste por 30 dias • Frete grátis</p>
+            </div>
+            
+            <div class="hero-product">
+                <div class="product-3d-container" id="product3D">
+                    <canvas id="productCanvas"></canvas>
+                </div>
+                
+                <div class="floating-badge floating-badge-1"><span>🏆 Nº1 do Brasil</span></div>
+                <div class="floating-badge floating-badge-2"><span>✅ ANVISA</span></div>
+                <div class="floating-badge floating-badge-3"><span>⚡ 10X Mais Potente</span></div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Role para descobrir</span>
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. SEÇÃO DE BENEFÍCIOS PREMIUM -->
+    <!-- ========================================== -->
+    <section class="benefits-premium" id="beneficios">
+        <div class="benefits-glow benefits-glow-left"></div>
+        <div class="benefits-glow benefits-glow-right"></div>
+
+        <div class="benefits-container">
+            <div class="benefits-header">
+                <span class="section-tag">Por que o Velmo Black é Único</span>
+                <h2 class="benefits-title">Transformação <span class="gradient-text">Real</span> em 3 Etapas</h2>
+                <p class="benefits-subtitle">Cada dose do Velmo Black é uma sinfonia de ingredientes naturais trabalhando em perfeita harmonia para redefinir seu corpo.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card" data-tilt>
+                    <div class="card-inner">
+                        <div class="card-icon-container">
+                            <canvas class="card-canvas" id="canvasReduce"></canvas>
+                            <div class="card-icon-emoji">📏</div>
+                        </div>
+                        <h3 class="card-title">Reduz Medidas</h3>
+                        <p class="card-description">Elimina gordura localizada e redefine sua silhueta sem esforço excessivo. Resultados visíveis em semanas.</p>
+                        <div class="card-stat">
+                            <div class="stat-label">Eficácia comprovada</div>
+                            <div class="stat-bar"><div class="stat-fill" style="width: 97%;"></div></div>
+                            <div class="stat-value">97%</div>
+                        </div>
+                        <div class="card-particles" id="particlesReduce"></div>
+                    </div>
+                    <div class="card-border-glow"></div>
+                </div>
+
+                <div class="benefit-card" data-tilt>
+                    <div class="card-inner">
+                        <div class="card-icon-container">
+                            <canvas class="card-canvas" id="canvasAppetite"></canvas>
+                            <div class="card-icon-emoji">🧠</div>
+                        </div>
+                        <h3 class="card-title">Controla o Apetite</h3>
+                        <p class="card-description">Fim da compulsão alimentar. Seu cérebro aprende a reconhecer a saciedade, facilitando o foco nos seus objetivos.</p>
+                        <div class="card-stat">
+                            <div class="stat-label">Redução da fome</div>
+                            <div class="stat-bar"><div class="stat-fill" data-target="85" style="width: 10%;"></div></div>
+                            <div class="stat-value" data-target="85">10%</div>
+                        </div>
+                        <div class="card-particles" id="particlesAppetite"></div>
+                    </div>
+                    <div class="card-border-glow"></div>
+                </div>
+
+                <div class="benefit-card" data-tilt>
+                    <div class="card-inner">
+                        <div class="card-icon-container">
+                            <canvas class="card-canvas" id="canvasBurn"></canvas>
+                            <div class="card-icon-emoji">🔥</div>
+                        </div>
+                        <h3 class="card-title">Queima Gordura Acelerada</h3>
+                        <p class="card-description">Ativa seu metabolismo 24 horas por dia. Queima de gordura contínua, mesmo em repouso, sem dietas radicais.</p>
+                        <div class="card-stat">
+                            <div class="stat-label">Metabolismo</div>
+                            <div class="stat-bar"><div class="stat-fill" data-target="92" style="width: 10%;"></div></div>
+                            <div class="stat-value" data-target="92">10%</div>
+                        </div>
+                        <div class="card-particles" id="particlesBurn"></div>
+                    </div>
+                    <div class="card-border-glow"></div>
+                </div>
+            </div>
+
+            <div class="benefits-cta-wrapper">
+                <a href="#combos" class="benefits-cta">
+                    <span>QUERO COMEÇAR MINHA TRANSFORMAÇÃO</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. SEÇÃO DE OFERTAS TURBINADA -->
+    <!-- ========================================== -->
+    <section class="offers-premium" id="ofertas">
+        <div class="offers-background"></div>
+        
+        <div class="offers-container">
+            <div class="offers-header">
+                <span class="offers-badge pulse-animation">⚡ OFERTA RELÂMPAGO</span>
+                <h2 class="offers-title">Escolha o <span class="gradient-text">Combo Ideal</span> Para Você</h2>
+                <p class="offers-subtitle">A <strong>mudança definitiva</strong> do seu corpo começa com a escolha certa.</p>
+            </div>
+
+            <div class="urgency-bar">
+                <div class="urgency-content">
+                    <div class="urgency-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#FFB800" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="urgency-text">Essa oferta se encerra em:</span>
+                    <div class="countdown-premium" id="countdownPremium">
+                        <div class="countdown-block"><span class="countdown-number" id="countdownHours">02</span><span class="countdown-label">Horas</span></div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-block"><span class="countdown-number" id="countdownMinutes">09</span><span class="countdown-label">Minutos</span></div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-block"><span class="countdown-number" id="countdownSeconds">09</span><span class="countdown-label">Segundos</span></div>
+                    </div>
+                </div>
+                <div class="urgency-progress"><div class="urgency-progress-fill" id="urgencyFill"></div></div>
+            </div>
+
+            <div class="plans-grid">
+                <!-- Plano 1 Mês -->
+                <div class="plan-card plan-basic" data-tilt>
+                    <div class="plan-glass">
+                        <div class="plan-header"><h3 class="plan-name">Tratamento 1 Mês</h3><p class="plan-desc">Ideal para testar</p></div>
+                        <div class="plan-product-wrapper">
+                            <div class="product-neon-ring">
+                                <svg class="neon-svg" viewBox="0 0 200 200">
+                                    <ellipse cx="100" cy="100" rx="95" ry="95" fill="none" stroke="rgba(0,240,255,0.1)" stroke-width="4"/>
+                                    <ellipse cx="100" cy="100" rx="95" ry="95" fill="none" stroke="url(#neonGradientBasic)" stroke-width="4" stroke-dasharray="100 500" class="neon-dash"/>
+                                    <defs>
+                                        <linearGradient id="neonGradientBasic" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#00F0FF"/><stop offset="50%" stop-color="#00F0FF" stop-opacity="0.3"/><stop offset="100%" stop-color="#00F0FF"/>
+                                            <animateTransform attributeName="gradientTransform" type="rotate" from="0 100 100" to="360 100 100" dur="4s" repeatCount="indefinite"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="product-glow-aura"></div>
+                            <div class="product-image-container">
+                                <img src="img/produto-1-mes.png" alt="Velmo Black - 1 Mês" class="product-image">
+                            </div>
+                            <div class="orbit-particles">
+                                <div class="orbit-particle particle-1"></div><div class="orbit-particle particle-2"></div><div class="orbit-particle particle-3"></div>
+                                <div class="orbit-particle particle-4"></div><div class="orbit-particle particle-5"></div><div class="orbit-particle particle-6"></div>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li class="plan-feature"><span class="feature-check">✓</span> 1 Drink + 1 Cápsulas</li>
+                            <li class="plan-feature"><span class="feature-check">✓</span> Resultados iniciais</li>
+                            <li class="plan-feature"><span class="feature-check">✓</span> Frete Grátis</li>
+                        </ul>
+                        <div class="plan-price-wrapper">
+                            <div class="plan-price-old">De: R$ 299,90</div>
+                            <div class="plan-price"><span class="price-currency">12x de</span><span class="price-symbol">R$</span><span class="price-value">24,66</span></div>
+                            <div class="plan-price-total">ou R$ 209,90 à vista</div>
+                        </div>
+                        <a href="https://pay.hest.com.br/a128bce4-0149-474c-89d2-322bcccaa018" class="plan-cta plan-cta-secondary"><span>COMPRAR AGORA</span></a>
+                    </div>
+                </div>
+
+                <!-- Plano Estrela 3 Meses -->
+                <div class="plan-card plan-star" data-tilt>
+                    <div class="plan-star-badge"><span class="star-badge-icon">👑</span><span>MAIS VENDIDO</span></div>
+                    <div class="plan-star-glow-outer"></div>
+                    <div class="plan-glass">
+                        <div class="plan-header"><h3 class="plan-name">Tratamento 3 Meses</h3><p class="plan-desc">O Favorito das Clientes</p></div>
+                        <div class="plan-product-wrapper product-wrapper-star">
+                            <div class="product-neon-ring neon-ring-star">
+                                <svg class="neon-svg" viewBox="0 0 200 200">
+                                    <ellipse cx="100" cy="100" rx="95" ry="95" fill="none" stroke="rgba(0,240,255,0.15)" stroke-width="5"/>
+                                    <ellipse cx="100" cy="100" rx="95" ry="95" fill="none" stroke="url(#neonGradientStar)" stroke-width="5" stroke-dasharray="150 450" class="neon-dash neon-dash-fast"/>
+                                    <ellipse cx="100" cy="100" rx="75" ry="75" fill="none" stroke="url(#neonGradientStarInner)" stroke-width="2" stroke-dasharray="80 250" class="neon-dash neon-dash-reverse"/>
+                                    <defs>
+                                        <linearGradient id="neonGradientStar" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#00F0FF"/><stop offset="30%" stop-color="#FFB800"/><stop offset="60%" stop-color="#00F0FF"/><stop offset="100%" stop-color="#00F0FF"/>
+                                            <animateTransform attributeName="gradientTransform" type="rotate" from="0 100 100" to="360 100 100" dur="3s" repeatCount="indefinite"/>
+                                        </linearGradient>
+                                        <linearGradient id="neonGradientStarInner" x1="100%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#FFB800"/><stop offset="50%" stop-color="#00F0FF"/><stop offset="100%" stop-color="#FFB800"/>
+                                            <animateTransform attributeName="gradientTransform" type="rotate" from="360 100 100" to="0 100 100" dur="2.5s" repeatCount="indefinite"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="product-glow-aura aura-star"></div>
+                            <div class="product-image-container">
+                                <img src="img/produto-3-meses.png" alt="Velmo Black - 3 Meses" class="product-image">
+                                <span class="product-tag-badge">+1 GRÁTIS</span>
+                            </div>
+                            <div class="orbit-particles orbit-particles-star">
+                                <div class="orbit-particle particle-1"></div><div class="orbit-particle particle-2"></div><div class="orbit-particle particle-3"></div>
+                                <div class="orbit-particle particle-4"></div><div class="orbit-particle particle-5"></div><div class="orbit-particle particle-6"></div>
+                                <div class="orbit-particle particle-7"></div><div class="orbit-particle particle-8"></div>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li class="plan-feature"><span class="feature-check">✓</span> 3 Drinks + 3 Cápsulas</li>
+                            <li class="plan-feature"><span class="feature-check">✓</span> Resultados visíveis em 15 dias</li>
+                            <li class="plan-feature"><span class="feature-check">✓</span> Frete Grátis</li>
+                            <li class="plan-feature"><span class="feature-check">✓</span> E-book de Receitas</li>
+                            <li class="plan-feature feature-extra"><span class="feature-check">🎁</span> 1 Drink Extra Grátis</li>
+                        </ul>
+                        <div class="plan-price-wrapper">
+                            <div class="plan-price-old">De: R$ 899,70</div>
+                            <div class="plan-price"><span class="price-currency">12x de</span><span class="price-symbol">R$</span><span class="price-value">34,45</span></div>
+                            <div class="plan-price-total">ou R$ 335,70 à vista</div>
+                        </div>
+                        <div class="plan-savings"><span>💰 Você economiza R$ 564,00</span></div>
+                        <a href="https://pay.hest.com.br/0c423c4d-72cb-46e7-aad8-795568726f6d" class="plan-cta plan-cta-primary"><span>COMPRAR AGORA</span><span class="cta-sparkle">✨</span></a>
+                    </div>
+                </div>
+
+                <!-- Plano 5 Meses -->
+                <div class="plan-card plan-premium" data-tilt>
+                    <div class="plan-glass">
+                        <div class="plan-header"><h3 class="plan-name">Tratamento 5 Meses</h3><p class="plan-desc">Transformação Máxima</p></div>
+                        <div class="plan-product-wrapper">
+                            <div class="product-neon-ring">
+                                <svg class="neon-svg" viewBox="0 0 200 200">
+                                    <ellipse cx="100" cy="100" rx="95" ry="95" fill="none" stroke="rgba(0,240,255,0.1)" stroke-width="4"/>
+                                    <ellipse cx="100" cy="100" rx="95" ry="95" fill="none" stroke="url(#neonGradientPremium)" stroke-width="4" stroke-dasharray="120 480" class="neon-dash"/>
+                                    <defs>
+                                        <linearGradient id="neonGradientPremium" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#00F0FF"/><stop offset="50%" stop-color="#00F0FF" stop-opacity="0.3"/><stop offset="100%" stop-color="#00F0FF"/>
+                                            <animateTransform attributeName="gradientTransform" type="rotate" from="0 100 100" to="360 100 100" dur="5s" repeatCount="indefinite"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="product-glow-aura"></div>
+                            <div class="product-image-container">
+                                <img src="img/produto-5-meses.png" alt="Velmo Black - 5 Meses" class="product-image">
+                                <span class="product-tag-badge">+2 GRÁTIS</span>
+                            </div>
+                            <div class="orbit-particles">
+                                <div class="orbit-particle particle-1"></div><div class="orbit-particle particle-2"></div><div class="orbit-particle particle-3"></div>
+                                <div class="orbit-particle particle-4"></div><div class="orbit-particle particle-5"></div><div class="orbit-particle particle-6"></div>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li class="plan-feature"><span class="feature-check">✓</span> 5 Drinks + 5 Cápsulas</li>
+                            <li class="plan-feature"><span class="feature-check">✓</span> Transformação corporal completa</li>
+                            <li class="plan-feature"><span class="feature-check">✓</span> Frete Grátis</li>
+                            <li class="plan-feature feature-extra"><span class="feature-check">🎁</span> 2 Drinks Extra Grátis</li>
+                        </ul>
+                        <div class="plan-price-wrapper">
+                            <div class="plan-price-old">De: R$ 1.499,50</div>
+                            <div class="plan-price"><span class="price-currency">12x de</span><span class="price-symbol">R$</span><span class="price-value">47,28</span></div>
+                            <div class="plan-price-total">ou R$ 461,50 à vista</div>
+                        </div>
+                        <div class="plan-savings"><span>💰 Você economiza R$ 1.038,00</span></div>
+                        <a href="https://pay.hest.com.br/d22ec5de-66c3-41c6-b3be-e002c12d3b8a" class="plan-cta plan-cta-secondary"><span>COMPRAR AGORA</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. SEÇÃO DE COMBOS (2/4/6 MESES) -->
+    <!-- ========================================== -->
+    <section class="combo-section-premium" id="combos">
+        <div class="combo-glow combo-glow-top"></div>
+        <div class="combo-glow combo-glow-bottom"></div>
+
+        <div class="combo-container">
+            <div class="combo-header">
+                <span class="section-tag">Oferta Exclusiva</span>
+                <h2 class="combo-title">Escolha o <span class="gradient-text">Seu Combo</span></h2>
+                <p class="combo-subtitle">A combinação perfeita do <strong>Drink</strong> com as <strong>Cápsulas</strong> para potencializar seus resultados.</p>
+            </div>
+
+            <div class="combo-grid">
+                <!-- Combo 2 Meses -->
+                <div class="combo-card" data-tilt>
+                    <div class="combo-card-inner">
+                        <div class="combo-duration"><span class="duration-icon">📦</span><span class="duration-text">Plano Inicial</span></div>
+                        <h3 class="combo-name">Tratamento <span class="highlight">2 Meses</span></h3>
+                        <p class="combo-desc">Ideal para quem quer testar e sentir os primeiros resultados</p>
+                        <div class="combo-product-wrapper">
+                            <div class="combo-neon-ring">
+                                <svg viewBox="0 0 200 200">
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="rgba(0,240,255,0.15)" stroke-width="3"/>
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="url(#comboGradient1)" stroke-width="3" stroke-dasharray="120 400" class="neon-dash"/>
+                                    <defs>
+                                        <linearGradient id="comboGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#00F0FF"/><stop offset="100%" stop-color="#008080"/>
+                                            <animateTransform attributeName="gradientTransform" type="rotate" from="0 100 100" to="360 100 100" dur="4s" repeatCount="indefinite"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="combo-aura"></div>
+                            <div class="combo-image-container">
+                                <img src="img/combo-2-meses.png" alt="Combo 2 Meses" class="combo-image">
+                            </div>
+                        </div>
+                        <ul class="combo-features">
+                            <li><span class="feature-icon">✅</span> 2 Drinks + 2 Cápsulas</li>
+                            <li><span class="feature-icon">✅</span> Frete Grátis para todo Brasil</li>
+                            <li><span class="feature-icon">✅</span> E-book de Receitas Low Carb</li>
+                        </ul>
+                        <div class="combo-price-block">
+                            <div class="combo-price-old">De: R$ 499,80</div>
+                            <div class="combo-price-current"><span class="price-installments">12x de</span><span class="price-symbol">R$</span><span class="price-value">19,90</span></div>
+                            <div class="combo-price-cash">ou R$ 199,80 à vista</div>
+                        </div>
+                        <a href="#" class="combo-btn combo-btn-outline"><span>QUERO ESSE COMBO</span><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Combo 4 Meses (Destaque) -->
+                <div class="combo-card combo-card-star" data-tilt>
+                    <div class="combo-star-badge"><span>👑 MAIS VENDIDO</span></div>
+                    <div class="combo-star-glow"></div>
+                    <div class="combo-card-inner">
+                        <div class="combo-duration"><span class="duration-icon">🔥</span><span class="duration-text">O Favorito</span></div>
+                        <h3 class="combo-name">Tratamento <span class="highlight">4 Meses</span></h3>
+                        <p class="combo-desc">A escolha inteligente para resultados visíveis e duradouros</p>
+                        <div class="combo-product-wrapper combo-product-star">
+                            <div class="combo-neon-ring combo-neon-double">
+                                <svg viewBox="0 0 200 200">
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="rgba(0,240,255,0.2)" stroke-width="4"/>
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="url(#comboGradientStar)" stroke-width="4" stroke-dasharray="150 400" class="neon-dash-fast"/>
+                                    <ellipse cx="100" cy="100" rx="72" ry="72" fill="none" stroke="url(#comboGradientStarInner)" stroke-width="2" stroke-dasharray="80 250" class="neon-dash-reverse"/>
+                                    <defs>
+                                        <linearGradient id="comboGradientStar" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#FFB800"/><stop offset="50%" stop-color="#00F0FF"/><stop offset="100%" stop-color="#FFB800"/>
+                                            <animateTransform attributeName="gradientTransform" type="rotate" from="0 100 100" to="360 100 100" dur="3s" repeatCount="indefinite"/>
+                                        </linearGradient>
+                                        <linearGradient id="comboGradientStarInner" x1="100%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#00F0FF"/><stop offset="100%" stop-color="#FFB800"/>
+                                            <animateTransform attributeName="gradientTransform" type="rotate" from="360 100 100" to="0 100 100" dur="2.5s" repeatCount="indefinite"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="combo-aura combo-aura-star"></div>
+                            <div class="combo-image-container">
+                                <img src="img/combo-4-meses.png" alt="Combo 4 Meses" class="combo-image">
+                                <span class="combo-image-tag">MELHOR CUSTO</span>
+                            </div>
+                        </div>
+                        <ul class="combo-features">
+                            <li><span class="feature-icon">✅</span> 4 Drinks + 4 Cápsulas</li>
+                            <li><span class="feature-icon">✅</span> Frete Grátis para todo Brasil</li>
+                            <li><span class="feature-icon">✅</span> Acompanhamento VIP por WhatsApp</li>
+                            <li><span class="feature-icon feature-bonus">🎁</span> <strong>Brinde:</strong> Shakeira Personalizada</li>
+                        </ul>
+                        <div class="combo-price-block">
+                            <div class="combo-price-old">De: R$ 999,60</div>
+                            <div class="combo-price-current"><span class="price-installments">12x de</span><span class="price-symbol">R$</span><span class="price-value">34,90</span></div>
+                            <div class="combo-price-cash">ou R$ 349,90 à vista</div>
+                            <div class="combo-savings">💰 Economia de R$ 649,70</div>
+                        </div>
+                        <a href="#" class="combo-btn combo-btn-primary"><span>QUERO ESSE COMBO</span><span class="btn-sparkle">✨</span></a>
+                    </div>
+                </div>
+
+                <!-- Combo 6 Meses -->
+                <div class="combo-card" data-tilt>
+                    <div class="combo-card-inner">
+                        <div class="combo-duration"><span class="duration-icon">💎</span><span class="duration-text">Máximo Resultado</span></div>
+                        <h3 class="combo-name">Tratamento <span class="highlight">6 Meses</span></h3>
+                        <p class="combo-desc">Para quem quer a transformação completa e definitiva</p>
+                        <div class="combo-product-wrapper">
+                            <div class="combo-neon-ring">
+                                <svg viewBox="0 0 200 200">
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="rgba(0,240,255,0.15)" stroke-width="3"/>
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="url(#comboGradient3)" stroke-width="3" stroke-dasharray="140 400" class="neon-dash"/>
+                                    <defs>
+                                        <linearGradient id="comboGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#00F0FF"/><stop offset="100%" stop-color="#008080"/>
+                                            <animateTransform attributeName="gradientTransform" type="rotate" from="0 100 100" to="360 100 100" dur="5s" repeatCount="indefinite"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="combo-aura"></div>
+                            <div class="combo-image-container">
+                                <img src="img/combo-6-meses.png" alt="Combo 6 Meses" class="combo-image">
+                                <span class="combo-image-tag">+ECONÔMICO</span>
+                            </div>
+                        </div>
+                        <ul class="combo-features">
+                            <li><span class="feature-icon">✅</span> 6 Drinks + 6 Cápsulas</li>
+                            <li><span class="feature-icon">✅</span> Frete Grátis para todo Brasil</li>
+                            <li><span class="feature-icon">✅</span> Acompanhamento VIP por WhatsApp</li>
+                            <li><span class="feature-icon feature-bonus">🎁</span> <strong>Brinde:</strong> Balança Digital + Shakeira</li>
+                        </ul>
+                        <div class="combo-price-block">
+                            <div class="combo-price-old">De: R$ 1.499,40</div>
+                            <div class="combo-price-current"><span class="price-installments">12x de</span><span class="price-symbol">R$</span><span class="price-value">47,90</span></div>
+                            <div class="combo-price-cash">ou R$ 479,90 à vista</div>
+                            <div class="combo-savings">💰 Economia de R$ 1.019,50</div>
+                        </div>
+                        <a href="#" class="combo-btn combo-btn-outline"><span>QUERO ESSE COMBO</span><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. DRINK COM SABORES -->
+    <!-- ========================================== -->
+    <section class="drink-section-premium" id="drink">
+        <div class="drink-bg-particles" id="drinkParticles"></div>
+        <div class="drink-container">
+            <div class="drink-header">
+                <span class="section-tag">Apenas o Drink</span>
+                <h2 class="drink-title">Escolha Agora o Seu Tratamento <span class="gradient-text">Velmo Black Drink</span></h2>
+                <p class="drink-subtitle">O emagrecedor líquido mais potente do Brasil. <strong>Zero açúcar, sabor incrível, resultado real.</strong></p>
+            </div>
+
+            <div class="flavor-tabs">
+                <button class="flavor-tab active" data-flavor="morango"><span class="flavor-icon">🍓</span><span class="flavor-name">Morango</span><span class="flavor-indicator"></span></button>
+                <button class="flavor-tab" data-flavor="tangerina"><span class="flavor-icon">🍊</span><span class="flavor-name">Tangerina</span><span class="flavor-indicator"></span></button>
+            </div>
+
+            <!-- Painel Morango -->
+            <div class="flavor-panel active" id="panelMorango">
+                <div class="flavor-grid">
+                    <div class="flavor-card" data-tilt>
+                        <div class="flavor-card-glass">
+                            <div class="flavor-card-badge">🥤 1 Mês</div>
+                            <h4 class="flavor-card-title">Compra Única</h4>
+                            <p class="flavor-card-desc">Ideal para experimentar o sabor e os primeiros resultados</p>
+                            <div class="flavor-product-visual"><div class="flavor-mini-neon"></div><img src="img/drink-morango-1.png" alt="Drink Morango 1 unidade" class="flavor-product-img"></div>
+                            <div class="flavor-price-row">
+                                <span class="flavor-old-price">De: R$ 299,90</span>
+                                <div class="flavor-price"><small>12x de</small> R$ <strong>24,66</strong></div>
+                                <span class="flavor-cash">ou R$ 209,90 à vista</span>
+                            </div>
+                            <a href="#" class="flavor-btn flavor-btn-outline">COMPRAR AGORA</a>
+                            <span class="flavor-shipping">🚚 Frete Grátis</span>
+                        </div>
+                    </div>
+                    <div class="flavor-card flavor-card-highlight" data-tilt>
+                        <div class="flavor-highlight-ribbon">MAIS PROCURADO</div>
+                        <div class="flavor-card-glass">
+                            <div class="flavor-card-badge">🥤🥤🥤 3 Meses</div>
+                            <h4 class="flavor-card-title">Comprou 2, Levou 3</h4>
+                            <p class="flavor-card-desc">O plano campeão de vendas. Melhor custo-benefício</p>
+                            <div class="flavor-product-visual flavor-visual-highlight"><div class="flavor-mini-neon flavor-neon-double"></div><img src="img/drink-morango-3.png" alt="Drink Morango 3 unidades" class="flavor-product-img"><span class="flavor-tag-free">+1 GRÁTIS</span></div>
+                            <div class="flavor-price-row">
+                                <span class="flavor-old-price">De: R$ 899,70</span>
+                                <div class="flavor-price flavor-price-highlight"><small>12x de</small> R$ <strong>34,45</strong></div>
+                                <span class="flavor-cash">ou R$ 335,70 à vista</span>
+                                <span class="flavor-save">💰 Economia de R$ 564,00</span>
+                            </div>
+                            <a href="#" class="flavor-btn flavor-btn-primary">COMPRAR AGORA ✨</a>
+                            <span class="flavor-shipping">🚚 Frete Grátis</span>
+                        </div>
+                    </div>
+                    <div class="flavor-card" data-tilt>
+                        <div class="flavor-card-glass">
+                            <div class="flavor-card-badge">🥤🥤🥤🥤🥤 5 Meses</div>
+                            <h4 class="flavor-card-title">Comprou 3, Levou 5</h4>
+                            <p class="flavor-card-desc">Para quem busca a transformação máxima</p>
+                            <div class="flavor-product-visual"><div class="flavor-mini-neon"></div><img src="img/drink-morango-5.png" alt="Drink Morango 5 unidades" class="flavor-product-img"><span class="flavor-tag-free">+2 GRÁTIS</span></div>
+                            <div class="flavor-price-row">
+                                <span class="flavor-old-price">De: R$ 1.499,50</span>
+                                <div class="flavor-price"><small>12x de</small> R$ <strong>47,28</strong></div>
+                                <span class="flavor-cash">ou R$ 461,50 à vista</span>
+                                <span class="flavor-save">💰 Economia de R$ 1.038,00</span>
+                            </div>
+                            <a href="#" class="flavor-btn flavor-btn-outline">COMPRAR AGORA</a>
+                            <span class="flavor-shipping">🚚 Frete Grátis</span>
+                        </div>
+                    </div>
+                    <div class="flavor-card" data-tilt>
+                        <div class="flavor-card-glass">
+                            <div class="flavor-card-badge">🥤×12 12 Meses</div>
+                            <h4 class="flavor-card-title">Comprou 8, Levou 12</h4>
+                            <p class="flavor-card-desc">O plano anual definitivo. Máxima economia</p>
+                            <div class="flavor-product-visual"><div class="flavor-mini-neon"></div><img src="img/drink-morango-12.png" alt="Drink Morango 12 unidades" class="flavor-product-img"><span class="flavor-tag-free">+4 GRÁTIS</span></div>
+                            <div class="flavor-price-row">
+                                <span class="flavor-old-price">De: R$ 3.598,80</span>
+                                <div class="flavor-price"><small>12x de</small> R$ <strong>89,90</strong></div>
+                                <span class="flavor-cash">ou R$ 899,90 à vista</span>
+                                <span class="flavor-save">💰 Economia de R$ 2.698,90</span>
+                            </div>
+                            <a href="#" class="flavor-btn flavor-btn-outline">COMPRAR AGORA</a>
+                            <span class="flavor-shipping">🚚 Frete Grátis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painel Tangerina -->
+            <div class="flavor-panel" id="panelTangerina">
+                <div class="flavor-grid">
+                    <div class="flavor-card" data-tilt>
+                        <div class="flavor-card-glass">
+                            <div class="flavor-card-badge">🥤 1 Mês</div>
+                            <h4 class="flavor-card-title">Compra Única</h4>
+                            <p class="flavor-card-desc">Descubra o sabor cítrico que acelera seu metabolismo</p>
+                            <div class="flavor-product-visual"><div class="flavor-mini-neon flavor-neon-tangerine"></div><img src="img/drink-tangerina-1.png" alt="Drink Tangerina 1 unidade" class="flavor-product-img"></div>
+                            <div class="flavor-price-row">
+                                <span class="flavor-old-price">De: R$ 299,90</span>
+                                <div class="flavor-price"><small>12x de</small> R$ <strong>24,66</strong></div>
+                                <span class="flavor-cash">ou R$ 209,90 à vista</span>
+                            </div>
+                            <a href="#" class="flavor-btn flavor-btn-outline">COMPRAR AGORA</a>
+                            <span class="flavor-shipping">🚚 Frete Grátis</span>
+                        </div>
+                    </div>
+                    <div class="flavor-card flavor-card-highlight" data-tilt>
+                        <div class="flavor-highlight-ribbon">MAIS PROCURADO</div>
+                        <div class="flavor-card-glass">
+                            <div class="flavor-card-badge">🥤🥤🥤 3 Meses</div>
+                            <h4 class="flavor-card-title">Comprou 2, Levou 3</h4>
+                            <p class="flavor-card-desc">O frescor da tangerina por 3 meses</p>
+                            <div class="flavor-product-visual flavor-visual-highlight"><div class="flavor-mini-neon flavor-neon-double flavor-neon-tangerine"></div><img src="img/drink-tangerina-3.png" alt="Drink Tangerina 3 unidades" class="flavor-product-img"><span class="flavor-tag-free">+1 GRÁTIS</span></div>
+                            <div class="flavor-price-row">
+                                <span class="flavor-old-price">De: R$ 899,70</span>
+                                <div class="flavor-price flavor-price-highlight"><small>12x de</small> R$ <strong>34,45</strong></div>
+                                <span class="flavor-cash">ou R$ 335,70 à vista</span>
+                                <span class="flavor-save">💰 Economia de R$ 564,00</span>
+                            </div>
+                            <a href="#" class="flavor-btn flavor-btn-primary">COMPRAR AGORA ✨</a>
+                            <span class="flavor-shipping">🚚 Frete Grátis</span>
+                        </div>
+                    </div>
+                    <div class="flavor-card" data-tilt>
+                        <div class="flavor-card-glass">
+                            <div class="flavor-card-badge">🥤🥤🥤🥤🥤 5 Meses</div>
+                            <h4 class="flavor-card-title">Comprou 3, Levou 5</h4>
+                            <p class="flavor-card-desc">Meio ano de transformação com sabor refrescante</p>
+                            <div class="flavor-product-visual"><div class="flavor-mini-neon flavor-neon-tangerine"></div><img src="img/drink-tangerina-5.png" alt="Drink Tangerina 5 unidades" class="flavor-product-img"><span class="flavor-tag-free">+2 GRÁTIS</span></div>
+                            <div class="flavor-price-row">
+                                <span class="flavor-old-price">De: R$ 1.499,50</span>
+                                <div class="flavor-price"><small>12x de</small> R$ <strong>47,28</strong></div>
+                                <span class="flavor-cash">ou R$ 461,50 à vista</span>
+                                <span class="flavor-save">💰 Economia de R$ 1.038,00</span>
+                            </div>
+                            <a href="#" class="flavor-btn flavor-btn-outline">COMPRAR AGORA</a>
+                            <span class="flavor-shipping">🚚 Frete Grátis</span>
+                        </div>
+                    </div>
+                    <div class="flavor-card" data-tilt>
+                        <div class="flavor-card-glass">
+                            <div class="flavor-card-badge">🥤×12 12 Meses</div>
+                            <h4 class="flavor-card-title">Comprou 8, Levou 12</h4>
+                            <p class="flavor-card-desc">O plano anual para nunca mais se preocupar</p>
+                            <div class="flavor-product-visual"><div class="flavor-mini-neon flavor-neon-tangerine"></div><img src="img/drink-tangerina-12.png" alt="Drink Tangerina 12 unidades" class="flavor-product-img"><span class="flavor-tag-free">+4 GRÁTIS</span></div>
+                            <div class="flavor-price-row">
+                                <span class="flavor-old-price">De: R$ 3.598,80</span>
+                                <div class="flavor-price"><small>12x de</small> R$ <strong>89,90</strong></div>
+                                <span class="flavor-cash">ou R$ 899,90 à vista</span>
+                                <span class="flavor-save">💰 Economia de R$ 2.698,90</span>
+                            </div>
+                            <a href="#" class="flavor-btn flavor-btn-outline">COMPRAR AGORA</a>
+                            <span class="flavor-shipping">🚚 Frete Grátis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. CÁPSULAS -->
+    <!-- ========================================== -->
+    <section class="capsules-section-premium" id="capsulas">
+        <div class="capsules-glow capsules-glow-left"></div>
+        <div class="capsules-glow capsules-glow-right"></div>
+        <div class="capsules-container">
+            <div class="capsules-header">
+                <span class="section-tag">Apenas as Cápsulas</span>
+                <h2 class="capsules-title">Escolha Agora o Seu Tratamento <span class="gradient-text">Velmo Black Cápsulas</span></h2>
+                <p class="capsules-subtitle">A potência concentrada do emagrecimento natural em cápsulas. <strong>Fórmula exclusiva, absorção máxima.</strong></p>
+            </div>
+            <div class="capsules-grid">
+                <!-- Cápsulas 1 Mês -->
+                <div class="capsule-card" data-tilt>
+                    <div class="capsule-card-inner">
+                        <div class="capsule-badge"><span class="capsule-badge-icon">💊</span><span class="capsule-badge-text">Plano Essencial</span></div>
+                        <h3 class="capsule-name">Compra <span class="highlight">Única</span></h3>
+                        <p class="capsule-desc">1 frasco de cápsulas para 1 mês de tratamento inicial</p>
+                        <div class="capsule-product-wrapper">
+                            <div class="capsule-neon-ring">
+                                <svg viewBox="0 0 200 200">
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="rgba(0,240,255,0.12)" stroke-width="3"/>
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="url(#capsuleGradient1)" stroke-width="3" stroke-dasharray="130 420" class="neon-dash"/>
+                                    <defs><linearGradient id="capsuleGradient1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00F0FF"/><stop offset="50%" stop-color="#00F0FF" stop-opacity="0.2"/><stop offset="100%" stop-color="#00F0FF"/><animateTransform attributeName="gradientTransform" type="rotate" from="0 100 100" to="360 100 100" dur="5s" repeatCount="indefinite"/></linearGradient></defs>
+                                </svg>
+                            </div>
+                            <div class="capsule-aura"></div>
+                            <div class="capsule-image-container"><img src="img/capsulas-1-mes.png" alt="Cápsulas 1 Mês" class="capsule-image"></div>
+                        </div>
+                        <ul class="capsule-features">
+                            <li><span class="feature-check">✓</span> 1 Frasco (60 cápsulas)</li>
+                            <li><span class="feature-check">✓</span> 1 mês de tratamento</li>
+                            <li><span class="feature-check">✓</span> Frete Grátis</li>
+                        </ul>
+                        <div class="capsule-price-block">
+                            <div class="capsule-old-price">De: R$ 299,90</div>
+                            <div class="capsule-price-main"><span class="price-installments">12x de</span><span class="price-symbol">R$</span><span class="price-value">24,66</span></div>
+                            <div class="capsule-cash-price">ou R$ 209,90 à vista</div>
+                        </div>
+                        <a href="#" class="capsule-btn capsule-btn-outline"><span>COMPRAR AGORA</span><svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+                        <span class="capsule-shipping">🚚 Frete Grátis</span>
+                    </div>
+                </div>
+                <!-- Cápsulas 2+3 (Destaque) -->
+                <div class="capsule-card capsule-card-star" data-tilt>
+                    <div class="capsule-star-ribbon"><span class="ribbon-icon">👑</span><span>MAIS VENDIDO</span></div>
+                    <div class="capsule-star-outer-glow"></div>
+                    <div class="capsule-card-inner">
+                        <div class="capsule-badge"><span class="capsule-badge-icon">💊💊💊</span><span class="capsule-badge-text">O Favorito</span></div>
+                        <h3 class="capsule-name">Comprou <span class="highlight">2</span>, Levou <span class="highlight">3</span></h3>
+                        <p class="capsule-desc">3 frascos para 3 meses de transformação garantida</p>
+                        <div class="capsule-product-wrapper capsule-product-star">
+                            <div class="capsule-neon-ring capsule-neon-double">
+                                <svg viewBox="0 0 200 200">
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="rgba(0,240,255,0.2)" stroke-width="4"/>
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="url(#capsuleGradientStar)" stroke-width="4" stroke-dasharray="160 400" class="neon-dash-fast"/>
+                                    <ellipse cx="100" cy="100" rx="70" ry="70" fill="none" stroke="url(#capsuleGradientStarInner)" stroke-width="2" stroke-dasharray="90 280" class="neon-dash-reverse"/>
+                                    <defs><linearGradient id="capsuleGradientStar" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFB800"/><stop offset="40%" stop-color="#00F0FF"/><stop offset="70%" stop-color="#FFB800"/><stop offset="100%" stop-color="#00F0FF"/><animateTransform attributeName="gradientTransform" type="rotate" from="0 100 100" to="360 100 100" dur="3s" repeatCount="indefinite"/></linearGradient><linearGradient id="capsuleGradientStarInner" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#00F0FF"/><stop offset="50%" stop-color="#FFB800"/><stop offset="100%" stop-color="#00F0FF"/><animateTransform attributeName="gradientTransform" type="rotate" from="360 100 100" to="0 100 100" dur="2.5s" repeatCount="indefinite"/></linearGradient></defs>
+                                </svg>
+                            </div>
+                            <div class="capsule-aura capsule-aura-star"></div>
+                            <div class="capsule-image-container"><img src="img/capsulas-3-meses.png" alt="Cápsulas 3 Meses" class="capsule-image"><span class="capsule-free-tag">+1 GRÁTIS</span></div>
+                        </div>
+                        <ul class="capsule-features">
+                            <li><span class="feature-check">✓</span> 3 Frascos (180 cápsulas)</li>
+                            <li><span class="feature-check">✓</span> 3 meses de tratamento</li>
+                            <li><span class="feature-check">✓</span> Frete Grátis</li>
+                            <li class="feature-bonus-item"><span class="feature-check">🎁</span> <strong>1 Frasco Extra Grátis</strong></li>
+                        </ul>
+                        <div class="capsule-price-block">
+                            <div class="capsule-old-price">De: R$ 899,70</div>
+                            <div class="capsule-price-main"><span class="price-installments">12x de</span><span class="price-symbol">R$</span><span class="price-value">34,45</span></div>
+                            <div class="capsule-cash-price">ou R$ 335,70 à vista</div>
+                            <div class="capsule-savings">💰 Você economiza R$ 564,00</div>
+                        </div>
+                        <a href="#" class="capsule-btn capsule-btn-primary"><span>COMPRAR AGORA</span><span class="btn-sparkle">✨</span></a>
+                        <span class="capsule-shipping">🚚 Frete Grátis</span>
+                    </div>
+                </div>
+                <!-- Cápsulas 3+5 -->
+                <div class="capsule-card" data-tilt>
+                    <div class="capsule-card-inner">
+                        <div class="capsule-badge"><span class="capsule-badge-icon">💊💊💊💊💊</span><span class="capsule-badge-text">Máximo Desconto</span></div>
+                        <h3 class="capsule-name">Comprou <span class="highlight">3</span>, Levou <span class="highlight">5</span></h3>
+                        <p class="capsule-desc">5 frascos para 5 meses de resultados extraordinários</p>
+                        <div class="capsule-product-wrapper">
+                            <div class="capsule-neon-ring">
+                                <svg viewBox="0 0 200 200">
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="rgba(0,240,255,0.12)" stroke-width="3"/>
+                                    <ellipse cx="100" cy="100" rx="90" ry="90" fill="none" stroke="url(#capsuleGradient3)" stroke-width="3" stroke-dasharray="140 420" class="neon-dash"/>
+                                    <defs><linearGradient id="capsuleGradient3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00F0FF"/><stop offset="50%" stop-color="#00F0FF" stop-opacity="0.2"/><stop offset="100%" stop-color="#00F0FF"/><animateTransform attributeName="gradientTransform" type="rotate" from="0 100 100" to="360 100 100" dur="4s" repeatCount="indefinite"/></linearGradient></defs>
+                                </svg>
+                            </div>
+                            <div class="capsule-aura"></div>
+                            <div class="capsule-image-container"><img src="img/capsulas-5-meses.png" alt="Cápsulas 5 Meses" class="capsule-image"><span class="capsule-free-tag">+2 GRÁTIS</span></div>
+                        </div>
+                        <ul class="capsule-features">
+                            <li><span class="feature-check">✓</span> 5 Frascos (300 cápsulas)</li>
+                            <li><span class="feature-check">✓</span> 5 meses de tratamento</li>
+                            <li><span class="feature-check">✓</span> Frete Grátis</li>
+                            <li class="feature-bonus-item"><span class="feature-check">🎁</span> <strong>2 Frascos Extra Grátis</strong></li>
+                        </ul>
+                        <div class="capsule-price-block">
+                            <div class="capsule-old-price">De: R$ 1.499,50</div>
+                            <div class="capsule-price-main"><span class="price-installments">12x de</span><span class="price-symbol">R$</span><span class="price-value">47,28</span></div>
+                            <div class="capsule-cash-price">ou R$ 461,50 à vista</div>
+                            <div class="capsule-savings">💰 Você economiza R$ 1.038,00</div>
+                        </div>
+                        <a href="#" class="capsule-btn capsule-btn-outline"><span>COMPRAR AGORA</span><svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+                        <span class="capsule-shipping">🚚 Frete Grátis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. DEPOIMENTOS -->
+    <!-- ========================================== -->
+    <section class="testimonials-premium" id="depoimentos">
+        <div class="testimonials-bg"></div>
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <span class="section-tag">Resultados Reais</span>
+                <h2 class="testimonials-title">Mais de <span class="gradient-text">30.000</span> Transformações</h2>
+                <p class="testimonials-subtitle">Veja o que mulheres reais estão conquistando com o <strong>Velmo Black</strong>.</p>
+                <div class="rating-badge">
+                    <div class="rating-stars"><span class="star star-filled">★</span><span class="star star-filled">★</span><span class="star star-filled">★</span><span class="star star-filled">★</span><span class="star star-half">★</span></div>
+                    <span class="rating-score">4.9/5</span><span class="rating-count">(2.847 avaliações)</span>
+                </div>
+            </div>
+            <div class="masonry-grid">
+                <div class="masonry-card card-large">
+                    <div class="card-before-after">
+                        <div class="ba-label ba-label-before">Antes</div><div class="ba-label ba-label-after">Depois</div>
+                        <div class="ba-image-container">
+                            <img src="img/antes-depois-1a.jpg" alt="Antes" class="ba-image ba-image-before">
+                            <img src="img/antes-depois-1b.jpg" alt="Depois" class="ba-image ba-image-after">
+                            <div class="ba-divider" id="baDivider1"><div class="ba-divider-line"></div><div class="ba-divider-handle"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5L8 19M16 5L16 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div></div>
+                        </div>
+                    </div>
+                    <div class="card-testimonial-content">
+                        <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                        <p class="testimonial-text">"Perdi 12kg em 2 meses! O Velmo Black mudou completamente minha relação com a comida."</p>
+                        <div class="testimonial-author"><div class="author-avatar">MF</div><div class="author-info"><span class="author-name">Maria Fernanda</span><span class="author-verification">✓ Compra verificada</span></div></div>
+                    </div>
+                </div>
+                <div class="masonry-card card-video">
+                    <div class="video-thumbnail" data-video-id="depoimento1">
+                        <img src="img/video-thumb-1.jpg" alt="Depoimento em vídeo" class="video-thumb-img">
+                        <div class="video-play-btn"><div class="play-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="8,5 19,12 8,19"/></svg></div><span class="play-text">Ver depoimento</span></div>
+                    </div>
+                    <div class="card-testimonial-content">
+                        <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                        <p class="testimonial-text">"Eu já tinha tentado de tudo. Só o Velmo Black me deu resultado. Minha autoestima voltou!"</p>
+                        <div class="testimonial-author"><div class="author-avatar">AS</div><div class="author-info"><span class="author-name">Ana Silva</span><span class="author-verification">✓ Compra verificada</span></div></div>
+                    </div>
+                </div>
+                <div class="masonry-card card-hover-reveal">
+                    <div class="reveal-image-container"><img src="img/resultado-1.jpg" alt="Resultado" class="reveal-image reveal-default"><div class="reveal-overlay"><span class="reveal-text">-15kg em 3 meses</span></div></div>
+                    <div class="card-testimonial-content">
+                        <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                        <p class="testimonial-text">"Nunca imaginei que seria tão fácil. Recomendo para todas as minhas amigas!"</p>
+                        <div class="testimonial-author"><div class="author-avatar">CP</div><div class="author-info"><span class="author-name">Carla Pereira</span><span class="author-verification">✓ Compra verificada</span></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-cta">
+                <p class="cta-question">Pronta para escrever sua própria história de transformação?</p>
+                <a href="#combos" class="plan-cta plan-cta-primary"><span>QUERO MEU VELMO BLACK AGORA</span><span class="cta-sparkle">✨</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 8. CIÊNCIA POR TRÁS -->
+    <!-- ========================================== -->
+    <section class="science-premium" id="ciencia">
+        <div class="science-particles" id="scienceParticles"></div>
+        <svg class="molecule-lines" viewBox="0 0 1440 800" preserveAspectRatio="none">
+            <line x1="100" y1="200" x2="400" y2="100" stroke="rgba(0,240,255,0.06)" stroke-width="1"/>
+            <line x1="400" y1="100" x2="700" y2="300" stroke="rgba(0,240,255,0.06)" stroke-width="1"/>
+            <line x1="700" y1="300" x2="1100" y2="150" stroke="rgba(0,240,255,0.06)" stroke-width="1"/>
+            <line x1="1100" y1="150" x2="1340" y2="400" stroke="rgba(0,240,255,0.06)" stroke-width="1"/>
+            <line x1="200" y1="500" x2="500" y2="600" stroke="rgba(0,240,255,0.04)" stroke-width="1"/>
+            <line x1="500" y1="600" x2="900" y2="450" stroke="rgba(0,240,255,0.04)" stroke-width="1"/>
+            <line x1="900" y1="450" x2="1300" y2="550" stroke="rgba(0,240,255,0.04)" stroke-width="1"/>
+        </svg>
+        <div class="science-container">
+            <div class="science-header">
+                <span class="section-tag">Tecnologia e Inovação</span>
+                <h2 class="science-title">A <span class="gradient-text">Ciência</span> Por Trás do Emagrecimento</h2>
+                <p class="science-subtitle">Cada componente do Velmo Black foi selecionado por cientistas para criar a <strong>fórmula mais potente</strong> de emagrecimento natural já desenvolvida no Brasil.</p>
+            </div>
+            <div class="ingredients-interactive">
+                <div class="molecule-core" id="moleculeCore">
+                    <div class="core-circle"><div class="core-inner"><span class="core-text">VELMO BLACK</span><span class="core-sub">Fórmula Exclusiva</span></div><div class="core-ring core-ring-1"></div><div class="core-ring core-ring-2"></div><div class="core-ring core-ring-3"></div></div>
+                </div>
+                <div class="ingredient-node node-top-right" data-ingredient="cafeina"><div class="node-content"><div class="node-icon"><canvas class="node-canvas" id="canvasCafeina" width="60" height="60"></canvas><span class="node-emoji">🍃</span></div><div class="node-info"><h4 class="node-name">Cafeína Verde</h4><p class="node-desc">Termogênico natural que acelera o metabolismo</p><div class="node-stat"><span class="node-stat-value">+30%</span><span class="node-stat-label">Queima calórica</span></div></div></div></div>
+                <div class="ingredient-node node-top-left" data-ingredient="psyllium"><div class="node-content"><div class="node-icon"><canvas class="node-canvas" id="canvasPsyllium" width="60" height="60"></canvas><span class="node-emoji">🌾</span></div><div class="node-info"><h4 class="node-name">Psyllium</h4><p class="node-desc">Fibra que promove saciedade e reduz compulsão</p><div class="node-stat"><span class="node-stat-value">85%</span><span class="node-stat-label">Redução da fome</span></div></div></div></div>
+                <div class="ingredient-node node-right" data-ingredient="cromo"><div class="node-content"><div class="node-icon"><canvas class="node-canvas" id="canvasCromo" width="60" height="60"></canvas><span class="node-emoji">⚡</span></div><div class="node-info"><h4 class="node-name">Picolinato de Cromo</h4><p class="node-desc">Regula a glicose e controla vontade de doces</p><div class="node-stat"><span class="node-stat-value">2X</span><span class="node-stat-label">Controle glicêmico</span></div></div></div></div>
+                <div class="ingredient-node node-bottom-right" data-ingredient="colageno"><div class="node-content"><div class="node-icon"><canvas class="node-canvas" id="canvasColageno" width="60" height="60"></canvas><span class="node-emoji">✨</span></div><div class="node-info"><h4 class="node-name">Colágeno Verisol</h4><p class="node-desc">Reduz celulite e melhora elasticidade da pele</p><div class="node-stat"><span class="node-stat-value">-35%</span><span class="node-stat-label">Celulite visível</span></div></div></div></div>
+                <div class="ingredient-node node-bottom-left" data-ingredient="vitaminaD"><div class="node-content"><div class="node-icon"><canvas class="node-canvas" id="canvasVitaminaD" width="60" height="60"></canvas><span class="node-emoji">☀️</span></div><div class="node-info"><h4 class="node-name">Vitamina D3</h4><p class="node-desc">Potencializa a queima de gordura</p><div class="node-stat"><span class="node-stat-value">40%</span><span class="node-stat-label">Mais disposição</span></div></div></div></div>
+            </div>
+            <div class="transformation-timeline">
+                <h3 class="timeline-title">Sua <span class="gradient-text">Transformação</span> Dia a Dia</h3>
+                <div class="timeline-track">
+                    <div class="timeline-progress" id="timelineProgress"></div>
+                    <div class="timeline-step active" data-step="1"><div class="step-marker"><div class="marker-dot"></div><div class="marker-pulse"></div></div><div class="step-content"><div class="step-week">Semana 1</div><h4 class="step-title">Desintoxicação e Energia</h4><ul class="step-benefits"><li>✓ Redução do inchaço</li><li>✓ Aumento da disposição</li><li>✓ Controle inicial do apetite</li></ul></div></div>
+                    <div class="timeline-step" data-step="2"><div class="step-marker"><div class="marker-dot"></div><div class="marker-pulse"></div></div><div class="step-content"><div class="step-week">Mês 1</div><h4 class="step-title">Redução de Medidas</h4><ul class="step-benefits"><li>✓ -3 a 5kg na balança</li><li>✓ Roupas mais largas</li><li>✓ Fim da compulsão</li></ul></div></div>
+                    <div class="timeline-step" data-step="3"><div class="step-marker"><div class="marker-dot"></div><div class="marker-pulse"></div></div><div class="step-content"><div class="step-week">Mês 3</div><h4 class="step-title">Transformação Visível</h4><ul class="step-benefits"><li>✓ -8 a 12kg eliminados</li><li>✓ Silhueta redefinida</li><li>✓ Celulite reduzida</li></ul></div></div>
+                    <div class="timeline-step" data-step="4"><div class="step-marker"><div class="marker-dot"></div></div><div class="step-content"><div class="step-week">Mês 6</div><h4 class="step-title">Corpo dos Sonhos</h4><ul class="step-benefits"><li>✓ Peso estabilizado</li><li>✓ Metabolismo acelerado</li><li>✓ Resultado duradouro</li></ul></div></div>
+                </div>
+            </div>
+            <div class="efficacy-chart">
+                <div class="chart-header"><h3>Comparativo de <span class="gradient-text">Eficácia</span></h3><p>Velmo Black vs. Emagrecedores Convencionais</p></div>
+                <div class="chart-container"><canvas id="efficacyChart"></canvas></div>
+                <div class="chart-legend"><div class="legend-item"><span class="legend-color legend-velmo"></span><span>Velmo Black</span></div><div class="legend-item"><span class="legend-color legend-conventional"></span><span>Convencionais</span></div></div>
+            </div>
+            <div class="science-cta">
+                <p class="cta-question">Agora que você conhece a ciência, está pronta para sentir o poder?</p>
+                <a href="#combos" class="plan-cta plan-cta-primary"><span>QUERO COMEÇAR MINHA TRANSFORMAÇÃO</span><span class="cta-sparkle">🧬</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 9. FOOTER PREMIUM -->
+    <!-- ========================================== -->
+    <footer class="footer-premium">
+        <div class="footer-glow-top"></div>
+        <div class="footer-urgency-strip">
+            <div class="urgency-strip-content">
+                <div class="strip-icon">⚡</div>
+                <div class="strip-text"><span class="strip-main">🔥 ÚLTIMAS UNIDADES COM FRETE GRÁTIS</span><span class="strip-sub">Oferta válida apenas para os próximos pedidos</span></div>
+                <div class="strip-counter" id="remainingUnits"><span class="counter-number">47</span><span class="counter-label">unidades restantes</span></div>
+                <a href="#combos" class="strip-cta">GARANTIR O MEU →</a>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col footer-col-brand">
+                    <div class="footer-logo"><span class="logo-text">VELMO <span class="logo-highlight">BLACK</span></span><span class="logo-tagline">O Emagrecedor Nº1 do Brasil</span></div>
+                    <p class="footer-description">Transformando vidas com a sinergia perfeita entre ciência e natureza. Fórmula exclusiva, aprovada pela ANVISA e comprovada por milhares de mulheres.</p>
+                    <div class="footer-newsletter">
+                        <h4 class="newsletter-title">Receba Ofertas Exclusivas</h4>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <div class="newsletter-input-wrapper"><input type="email" placeholder="Seu melhor e-mail" class="newsletter-input" required><button type="submit" class="newsletter-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+                            <div class="newsletter-success" id="newsletterSuccess">✅ Cadastro realizado! Bem-vinda ao time Velmo Black!</div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-col"><h4 class="footer-col-title">Links Rápidos</h4><ul class="footer-links"><li><a href="#combos">Comprar Agora</a></li><li><a href="#beneficios">Benefícios</a></li><li><a href="#depoimentos">Depoimentos</a></li><li><a href="#ciencia">Ciência por Trás</a></li></ul></div>
+                <div class="footer-col"><h4 class="footer-col-title">Ajuda</h4><ul class="footer-links"><li><a href="#">Política de Privacidade</a></li><li><a href="#">Termos de Uso</a></li><li><a href="#">Política de Reembolso</a></li><li><a href="#">Contato</a></li></ul></div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Atendimento</h4>
+                    <div class="footer-contact"><div class="contact-item"><span class="contact-icon">📧</span><span>contato@velmoblack.com.br</span></div><div class="contact-item"><span class="contact-icon">📞</span><span>(11) 99999-9999</span></div><div class="contact-item"><span class="contact-icon">🕐</span><span>Seg a Sex: 9h às 18h</span></div></div>
+                    <div class="footer-seals"><div class="seal-item"><span class="seal-icon">🔒</span><div class="seal-info"><span class="seal-title">Site 100% Seguro</span><span class="seal-desc">SSL Criptografado</span></div></div><div class="seal-item"><span class="seal-icon">✅</span><div class="seal-info"><span class="seal-title">ANVISA</span><span class="seal-desc">Produto Regularizado</span></div></div></div>
+                </div>
+            </div>
+            <div class="footer-payment">
+                <div class="payment-row"><span class="payment-title">Formas de Pagamento</span><div class="payment-badges"><span class="payment-badge">💳</span><span class="payment-badge">🏦</span><span class="payment-badge">📱 Pix</span><span class="payment-badge">🛡️</span></div><span class="payment-parcels">Parcele em até <strong>12x sem juros</strong></span></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">© 2026 <strong>Velmo Black</strong>. Todos os direitos reservados.</p>
+                    <p class="footer-disclaimer">As informações contidas neste site não substituem a orientação de um profissional de saúde. Consulte sempre seu médico antes de iniciar qualquer suplementação. Resultados podem variar de pessoa para pessoa.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="23,7 16,12 23,17"/><rect x="2" y="3" width="20" height="18" rx="4"/></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+            <div class="whatsapp-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg></div>
+            <div class="whatsapp-pulse"></div>
+            <span class="whatsapp-tooltip">Precisa de ajuda?</span>
+        </a>
+    </footer>
+
+</body>
+</html>

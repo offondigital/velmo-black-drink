@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    
+    <title>Termos de Uso - Velmo Black</title>
+    <meta name="description" content="Termos de Uso do site Velmo Black. Leia atentamente antes de utilizar nossos serviços.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black-absolute: #050505;
+            --black-card: #0a0a0a;
+            --cyan-neon: #00F0FF;
+            --cyan-dark: #008080;
+            --white-pure: #FFFFFF;
+            --gray-light: #E0E0E0;
+            --gray-medium: #999;
+            --gray-dark: #666;
+            --gold-urgency: #FFB800;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --border-glow: rgba(0, 240, 255, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--black-absolute);
+            color: var(--gray-light);
+            font-family: 'Sora', 'Poppins', sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .legal-header {
+            background: linear-gradient(180deg, rgba(0, 240, 255, 0.05) 0%, transparent 100%);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .legal-header-inner {
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .legal-logo { text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .legal-logo-text { font-size: 20px; font-weight: 900; color: var(--white-pure); letter-spacing: 2px; }
+        .legal-logo-highlight { color: var(--cyan-neon); }
+
+        .legal-back-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: transparent; border: 1px solid var(--border-glow);
+            color: var(--cyan-neon); text-decoration: none; padding: 10px 20px;
+            border-radius: 50px; font-size: 13px; font-weight: 600; transition: all 0.3s ease;
+        }
+        .legal-back-btn:hover { background: rgba(0, 240, 255, 0.08); border-color: var(--cyan-neon); box-shadow: 0 0 20px rgba(0, 240, 255, 0.15); }
+
+        .legal-container { max-width: 900px; width: 90%; margin: 0 auto; padding: 60px 0; flex: 1; }
+
+        .legal-card {
+            background: rgba(18, 18, 18, 0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-subtle); border-radius: 24px; padding: 50px 40px;
+        }
+
+        .legal-card h1 { font-size: 36px; font-weight: 800; color: var(--white-pure); margin-bottom: 8px; }
+        .legal-card .gradient-text { background: linear-gradient(135deg, #00F0FF, #008080); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .legal-card .updated-date { color: var(--gray-dark); font-size: 13px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border-subtle); }
+        .legal-card h2 { font-size: 24px; font-weight: 700; color: var(--white-pure); margin: 36px 0 16px; padding-left: 16px; border-left: 3px solid var(--cyan-neon); }
+        .legal-card h3 { font-size: 18px; font-weight: 600; color: var(--cyan-neon); margin: 24px 0 12px; }
+        .legal-card p { color: var(--gray-medium); margin-bottom: 16px; font-size: 15px; }
+        .legal-card ul { list-style: none; padding-left: 20px; margin-bottom: 16px; }
+        .legal-card ul li { color: var(--gray-medium); margin-bottom: 10px; position: relative; padding-left: 20px; font-size: 15px; }
+        .legal-card ul li::before { content: '•'; color: var(--cyan-neon); position: absolute; left: 0; font-weight: bold; }
+        .legal-card strong { color: var(--white-pure); }
+        .legal-card a { color: var(--cyan-neon); text-decoration: none; transition: color 0.3s ease; }
+        .legal-card a:hover { color: var(--white-pure); text-decoration: underline; }
+
+        .legal-highlight-box {
+            background: rgba(255, 184, 0, 0.05); border: 1px solid rgba(255, 184, 0, 0.2);
+            border-radius: 12px; padding: 20px; margin: 24px 0;
+        }
+        .legal-highlight-box p { margin: 0; color: var(--gray-light); }
+
+        .legal-footer { background: var(--black-card); border-top: 1px solid var(--border-subtle); padding: 20px 0; text-align: center; }
+        .legal-footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 12px; }
+        .legal-footer-links a { color: var(--gray-dark); text-decoration: none; font-size: 13px; transition: color 0.3s ease; }
+        .legal-footer-links a:hover { color: var(--cyan-neon); }
+        .legal-footer-links a.active { color: var(--cyan-neon); font-weight: 600; }
+        .legal-footer p { color: var(--gray-dark); font-size: 12px; }
+
+        @media (max-width: 768px) {
+            .legal-card { padding: 30px 20px; }
+            .legal-card h1 { font-size: 26px; }
+            .legal-card h2 { font-size: 20px; }
+            .legal-header-inner { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="legal-header">
+        <div class="legal-header-inner">
+            <a href="index.html" class="legal-logo">
+                <span class="legal-logo-text">VELMO <span class="legal-logo-highlight">BLACK</span></span>
+            </a>
+            <a href="index.html" class="legal-back-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Voltar para o site
+            </a>
+        </div>
+    </header>
+
+    <main class="legal-container">
+        <div class="legal-card">
+            <h1>Termos de <span class="gradient-text">Uso</span></h1>
+            <p class="updated-date">Última atualização: 20 de Maio de 2026</p>
+
+            <div class="legal-highlight-box">
+                <p><strong>⚠️ Importante:</strong> Ao acessar e utilizar o site <strong>velmoblackoficial.com.br</strong>, você concorda integralmente com estes Termos de Uso. Caso não concorde com algum termo, não utilize nossos serviços.</p>
+            </div>
+
+            <h2>1. Aceitação dos Termos</h2>
+            <p>Estes Termos de Uso constituem um contrato legal entre você ("Usuário", "Cliente") e a <strong>Velmo Black</strong> ("Empresa", "nós", "nosso"). Ao navegar, criar conta ou realizar compras em nosso site, você declara ter lido, compreendido e aceito todas as condições aqui estabelecidas.</p>
+
+            <h2>2. Elegibilidade</h2>
+            <p>Para utilizar nossos serviços e adquirir produtos, você deve:</p>
+            <ul>
+                <li>Ter no mínimo <strong>18 anos de idade</strong> ou ser emancipado legalmente.</li>
+                <li>Possuir capacidade legal para contratar.</li>
+                <li>Fornecer informações verdadeiras, precisas e completas durante o cadastro e a compra.</li>
+            </ul>
+            <p>Reservamo-nos o direito de recusar qualquer pedido ou cancelar contas que apresentem informações falsas, incompletas ou fraudulentas.</p>
+
+            <h2>3. Produtos e Informações</h2>
+            <h3>3.1 Descrição dos Produtos</h3>
+            <p>O Velmo Black é um suplemento alimentar natural para auxílio no emagrecimento, aprovado pela ANVISA. As descrições, imagens e informações sobre os produtos são fornecidas para fins informativos.</p>
+            <p><strong>Importante:</strong> Nossos produtos não substituem uma alimentação equilibrada, prática regular de exercícios físicos ou acompanhamento médico. Resultados podem variar de pessoa para pessoa.</p>
+
+            <h3>3.2 Disponibilidade</h3>
+            <p>Todos os produtos estão sujeitos à disponibilidade de estoque. Em caso de indisponibilidade após a confirmação do pedido, entraremos em contato para oferecer alternativas ou realizar o reembolso integral.</p>
+
+            <h2>4. Preços e Pagamento</h2>
+            <ul>
+                <li>Os preços exibidos no site são em <strong>Reais (R$)</strong> e podem ser alterados sem aviso prévio.</li>
+                <li>O valor final do pedido será o exibido no momento da confirmação da compra.</li>
+                <li>Aceitamos as formas de pagamento indicadas na página de checkout: cartão de crédito (até 12x), boleto bancário e PIX.</li>
+                <li>O pagamento é processado por gateways terceiros seguros. Não armazenamos dados completos de cartão de crédito.</li>
+            </ul>
+
+            <h2>5. Entrega e Frete</h2>
+            <ul>
+                <li>O prazo de entrega varia conforme a região e é informado no momento da compra.</li>
+                <li>Oferecemos <strong>frete grátis</strong> para todos os combos promocionais (conforme indicado no site).</li>
+                <li>Não nos responsabilizamos por atrasos causados por greves dos Correios, desastres naturais, endereço incorreto ou ausência do destinatário.</li>
+            </ul>
+
+            <h2>6. Política de Reembolso e Garantia</h2>
+            <p>Oferecemos <strong>garantia de 30 dias</strong> a partir da data de recebimento do produto. Se você não estiver satisfeita, entre em contato conosco para solicitar o reembolso integral do valor pago (excluindo frete, se aplicável).</p>
+            <p>Para solicitar o reembolso:</p>
+            <ul>
+                <li>Envie um e-mail para <a href="mailto:suporte@velmoblack.com.br">suporte@velmoblack.com.br</a> informando o número do pedido.</li>
+                <li>O produto deve estar em condições adequadas para devolução.</li>
+                <li>O estorno será realizado em até 10 dias úteis após o recebimento e verificação do produto devolvido.</li>
+            </ul>
+
+            <h2>7. Propriedade Intelectual</h2>
+            <p>Todo o conteúdo do site — incluindo textos, imagens, logotipos, ícones, código-fonte, design e materiais de marketing — é de propriedade exclusiva da Velmo Black ou licenciado para seu uso. É proibida a reprodução total ou parcial sem autorização prévia e por escrito.</p>
+
+            <h2>8. Responsabilidades do Usuário</h2>
+            <p>Você concorda em não:</p>
+            <ul>
+                <li>Utilizar o site para fins ilegais ou fraudulentos.</li>
+                <li>Tentar acessar áreas restritas sem autorização.</li>
+                <li>Publicar conteúdo ofensivo, difamatório ou spam.</li>
+                <li>Utilizar robôs, scrapers ou ferramentas automatizadas para extrair dados do site.</li>
+            </ul>
+
+            <h2>9. Limitação de Responsabilidade</h2>
+            <p>A Velmo Black não será responsabilizada por:</p>
+            <ul>
+                <li>Resultados individuais do uso dos produtos, uma vez que dependem de fatores biológicos, genéticos e de estilo de vida.</li>
+                <li>Danos indiretos, incidentais ou consequenciais decorrentes do uso do site ou produtos.</li>
+                <li>Conteúdo de sites de terceiros linkados em nossa página.</li>
+            </ul>
+
+            <h2>10. Modificações</h2>
+            <p>Reservamo-nos o direito de modificar estes Termos de Uso a qualquer momento. As alterações entram em vigor imediatamente após a publicação no site. O uso continuado de nossos serviços após as modificações constitui aceitação dos novos termos.</p>
+
+            <h2>11. Lei Aplicável e Foro</h2>
+            <p>Estes Termos de Uso são regidos pelas leis da República Federativa do Brasil. Quaisquer disputas serão resolvidas no foro da comarca de São Paulo - SP, com renúncia a qualquer outro, por mais privilegiado que seja.</p>
+
+            <h2>12. Contato</h2>
+            <p>Para dúvidas sobre estes Termos:</p>
+            <ul>
+                <li><strong>E-mail:</strong> <a href="mailto:suporte@velmoblack.com.br">suporte@velmoblack.com.br</a></li>
+                <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="legal-footer">
+        <div class="legal-footer-links">
+            <a href="privacidade.html">Privacidade</a>
+            <a href="termos.html" class="active">Termos de Uso</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="isencao.html">Isenção Meta/Google</a>
+        </div>
+        <p>© 2026 Velmo Black. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
