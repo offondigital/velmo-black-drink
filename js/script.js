@@ -321,9 +321,7 @@
 
     requestAnimationFrame(function() { requestAnimationFrame(function() { init(); }); });
 })();
-// ==========================================
-    // COUNTDOWN COM LOCALSTORAGE - 15 MINUTOS
-    // ==========================================
+
     (function() {
         const COUNTDOWN_DURATION = 15 * 60; // 15 minutos em segundos
         const STORAGE_KEY = 'velmo_countdown_start_time';
@@ -379,9 +377,8 @@
         }
     })();
  
-═══════════════════════════════════════════
 RESUMO:
-═══════════════════════════════════════════
+
  
 ✓ Countdown começa em 15 minutos
 ✓ Se a pessoa sair e voltar, continua de onde parou
